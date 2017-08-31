@@ -1,5 +1,7 @@
 package com.globant.equattrocchio.data.response;
 
+import android.support.annotation.Nullable;
+
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
@@ -8,14 +10,15 @@ import java.util.List;
 public class Result {
     @SerializedName("images")
     @Expose
-    private List<Image> mImages = null;
+    private List<ImageResponse> mImageResponses = null;
 
-    public List<Image> getImages() {
-        return mImages;
+    @Nullable
+    public List<ImageResponse> getImages() {
+        return mImageResponses;
     }
 
-    public void setImages(List<Image> images) {
-        this.mImages = images;
+    public void setImages(@Nullable List<ImageResponse> imageResponses) {
+        this.mImageResponses = imageResponses;
     }
 
 }
