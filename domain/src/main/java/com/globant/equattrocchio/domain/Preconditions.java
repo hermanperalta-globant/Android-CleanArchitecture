@@ -58,7 +58,7 @@ public final class Preconditions {
         }
     }
 
-    private static String badElementIndex(int index, int size, String desc) {
+    private static String badElementIndex(int index, int size, @Nullable String desc) {
         if(index < 0) {
             return format("%s (%s) must not be negative", new Object[]{desc, Integer.valueOf(index)});
         } else if(size < 0) {

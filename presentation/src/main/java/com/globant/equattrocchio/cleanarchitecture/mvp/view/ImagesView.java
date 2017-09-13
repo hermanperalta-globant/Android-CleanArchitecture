@@ -1,5 +1,6 @@
 package com.globant.equattrocchio.cleanarchitecture.mvp.view;
 
+import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
@@ -15,7 +16,7 @@ public class ImagesView extends ActivityView {
 
     @BindView(R.id.tv_incoming_json) TextView tvlabel;
 
-    public ImagesView(AppCompatActivity activity) {
+    public ImagesView(@NonNull AppCompatActivity activity) {
         super(activity);
         ButterKnife.bind(this, activity);
     }
